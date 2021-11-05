@@ -36,7 +36,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET') {
         <label for="genero">Gênero</label>
         <select name="genero" class="form-select">
             <?php foreach($generos as $g): ?>
-                <option value="<?= $g['id']?>">
+                <option value="<?= $g['id']?>" <?= ($g['id'] == $livro['id']) ? 'selected' : ''?>>
                     <?= $g['nome']?>
                 </option>
             <?php endforeach ?>
